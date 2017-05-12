@@ -14,6 +14,7 @@ touch ${args[0]}/README.md
 mkdir ${args[0]}/lib/R -p
 mkdir ${args[0]}/lib/data
 mkdir ${args[0]}/lib/data-raw
+# R Files
 # TODO - Intelligently create a DESCRIPTION file with key R packages and a title
 # Package: ${args[0]}
 # Title:
@@ -44,6 +45,7 @@ mkdir ${args[0]}/lib/data-raw
 # LazyData: true
 # RoxygenNote: 6.0.1
 touch ${args[0]}/DESCRIPTION
+touch ${args[0]}/data-raw/import.R
 
 # Shiny directory
 mkdir ${args[0]}/lib/inst/shiny/${args[0]}
@@ -61,4 +63,8 @@ touch ${args[0]}/rmarkdown/sections/bibliography.bib
 # Misc
 mkdir ${args[0]}/tmp
 
-# TODO - Place under version control
+# Git Version control
+cd ${args[0]}
+git init
+git add --all
+# TODO - Modify ~ ${args[0]}/.git/config to be tailored
