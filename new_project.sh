@@ -50,9 +50,11 @@ touch ${args[0]}/data-raw/import.R
 # Shiny directory
 mkdir ${args[0]}/lib/inst/shiny/${args[0]}
 
+# TODO - initialise blogdown directory
+
 # Report direcories
-mkdir ${args[0]}/rmarkdown
-mkdir ${args[0]}/rmarkdown/sections/subsections
+mkdir ${args[0]}/rmarkdown/sections/subsections -p
+mkdir ${args[0]}/rmarkdown/sections/appendix -p
 touch ${args[0]}/rmarkdown/${args[0]}.Rmd
 touch ${args[0]}/rmarkdown/sections/overview.Rmd
 touch ${args[0]}/rmarkdown/sections/methods.Rmd
@@ -62,6 +64,7 @@ touch ${args[0]}/rmarkdown/sections/bibliography.bib
 
 # Misc
 mkdir ${args[0]}/tmp
+touch ${args[0]}/tmp/working.R
 
 # Git Version control
 cd ${args[0]}
